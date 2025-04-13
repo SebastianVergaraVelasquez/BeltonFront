@@ -8,7 +8,7 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     // Por ahora para simular los datos de inicio de sesión
-    if (email === "admin@beltongym.com" && password === "admin") {
+    if (email === "admin@admin" && password === "admin") {
       setUser({ name: "Admin", email });
       return true;
     }
