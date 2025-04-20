@@ -10,7 +10,6 @@ export default function Sidebar() {
         <img src="../media/logo.jpeg" alt="Belton Gym" style={{ width: '80%' }} />
       </div>
 
-      {/* Navigation */}
       <ul className="nav flex-column">
         <li className="nav-item mb-2">
           <Link to="/dashboard" className="nav-link text-white">
@@ -23,14 +22,35 @@ export default function Sidebar() {
           </Link>
         </li>
         <li className="nav-item mb-2">
-          <Link to="/memberships" className="nav-link text-white">
+          <Link to="/membership " className="nav-link text-white">
             <FaIdCard className="me-2" /> Membresías
+          </Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link to="/attendance" className="nav-link text-white">
+            <FaChartBar className="me-2" /> Asistencia
+          </Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link to="/products" className="nav-link text-white">
+            <FaChartBar className="me-2" /> Productos
+          </Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link to="/sales" className="nav-link text-white">
+            <FaChartBar className="me-2" /> Ventas
+          </Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link to="/purchase" className="nav-link text-white">
+            <FaChartBar className="me-2" /> Compras
           </Link>
         </li>
         <li className="nav-item mb-2">
           <Link to="/reports" className="nav-link text-white">
             <FaChartBar className="me-2" /> Reportes
           </Link>
+          {/* reportes aún no está funcionando */}
         </li>
       </ul>
     </div>
