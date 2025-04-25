@@ -16,12 +16,44 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} >
-        <h2>Iniciar Sesión</h2>
-        <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <input type="password" placeholder="Contraseña" value={password} onChange={e => setPassword(e.target.value)}  />
-        <button type="submit">Ingresar</button>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <form
+        onSubmit={handleSubmit}
+        className="p-4 rounded shadow bg-white text-center"
+        style={{ minWidth: '300px' }}
+      >
+        <img
+          src="/media/logo.jpeg"
+          alt="Belton Gym"
+          className="mb-4"
+          style={{ width: '100px', height: '100px' }}
+        />
+
+        <h2 className="mb-4">Iniciar Sesión</h2>
+
+        <div className="mb-3">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="mb-4">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Contraseña"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        </div>
+
+        <button type="submit" className="btn btn-dark w-100">
+          Ingresar
+        </button>
       </form>
     </div>
   );
