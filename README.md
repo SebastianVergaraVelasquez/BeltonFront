@@ -1,12 +1,47 @@
-# React + Vite
+# 🏋️‍♂️ Belton Gym Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto corresponde a la interfaz del sistema de gestión para el gimnasio **Belton Gym**, construido con **React** + **Vite**. Permite gestionar usuarios, membresías, asistencia, productos, ventas y compras.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/)
+- [React Router DOM 7](https://reactrouter.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Recharts](https://recharts.org/) para gráficas
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Vite](https://vitejs.dev/) como bundler
+- [ESLint](https://eslint.org/) para mantener buenas prácticas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Instalación
+
+### 1. Requisitos
+
+- Tener la última versión de [Node.js](https://nodejs.org/es) instalada.
+- Tener `yarn` o `npm` instalado globalmente.
+
+### 2. Clonar el repositorio
+
+-consola
+git clone https://github.com/tu-usuario/beltonfront.git
+cd beltonfront
+
+### 3. Instalar dependencias
+
+-consola, usar yarn o npm
+yarn install
+npm install
+
+### Comandos
+
+yarn dev --> Inicia el servidor de desarrollo en el puerto local 5173
+yarn build --> Construye la aplicación para producción
+
+
+
+
+
+
