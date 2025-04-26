@@ -42,7 +42,7 @@ export default function Header() {
           <button className="btn btn-outline-primary">
             <FaUserCircle className="me-1" /> Ver Perfil
           </button>
-          <button className="btn btn-outline-danger">
+          <button className="btn btn-outline-danger" onClick={() => {navigate("/login")}}>
             <FaSignOutAlt className="me-1" /> Logout
           </button>
         </div>
