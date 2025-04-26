@@ -10,7 +10,8 @@ const UserModal = ({ show, onClose, onSubmit, user }) => {
     email: '',
     lastname: '',
     name: '',
-    tel: ''
+    tel: '',
+    password: ''
   });
 
   const [userTypes, setUserTypes] = useState([]);
@@ -26,7 +27,8 @@ const UserModal = ({ show, onClose, onSubmit, user }) => {
     if (user) {
       setFormData({
         ...user,
-        userType: user.userType || { id: '' }
+        userType: user.userType || { id: '' },
+        password: '' // no se usa al editar, pero lo dejamos vacío
       });
     } else {
       setFormData({
@@ -37,7 +39,8 @@ const UserModal = ({ show, onClose, onSubmit, user }) => {
         email: '',
         lastname: '',
         name: '',
-        tel: ''
+        tel: '',
+        password: ''
       });
     }
   }, [user]);
@@ -147,6 +150,17 @@ const UserModal = ({ show, onClose, onSubmit, user }) => {
               onChange={handleChange}
             />
           </Form.Group>
+          {!user && (
+            <Form.Group className="mb-2">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </Form.Group>
+          )}
         </Form>
       </Modal.Body>
       <Modal.Footer>

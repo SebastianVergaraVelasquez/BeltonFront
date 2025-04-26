@@ -8,7 +8,12 @@ const Users = () => {
   const [filter, setFilter] = useState('');
 
   const fetchUsers = () => {
-    fetch('http://localhost:8080/belton/user')
+    const token = localStorage.getItem('token');
+    fetch('http://localhost:8080/belton/user', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -32,8 +37,13 @@ const Users = () => {
   };
 
   const handleDeleteUser = (id) => {
-    fetch(`http://localhost:8080/belton/user/${id}`, { method: 'DELETE' })
-      .then(() => fetchUsers());
+    const token = localStorage.getItem('token');
+    fetch(`http://localhost:8080/belton/user/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    }).then(() => fetchUsers());
   };
 
   const handleCloseModal = () => {
@@ -41,6 +51,7 @@ const Users = () => {
   };
 
   const handleSubmitUser = (user) => {
+    const token = localStorage.getItem('token');
     const method = user.id ? 'PUT' : 'POST';
     const url = user.id
       ? `http://localhost:8080/belton/user/${user.id}`
@@ -48,7 +59,10 @@ const Users = () => {
 
     fetch(url, {
       method,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
       body: JSON.stringify(user),
     }).then(() => fetchUsers());
   };
@@ -118,7 +132,7 @@ const Users = () => {
               ))
             ) : (
               <tr>
-                <td colSpan="8" className="text-center">Cargando usuarios...</td>
+                <td colSpan="10" className="text-center">Cargando usuarios...</td>
               </tr>
             )}
           </tbody>
